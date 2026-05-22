@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Canvassr</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-700 antialiased leading-relaxed">
+
+  <div class="max-w-3xl mx-auto px-6 py-12 sm:py-16">
+    <!-- Header Card -->
+    <header class="bg-indigo-900 text-white rounded-3xl p-8 sm:p-10 shadow-lg mb-10 select-none">
+      <div class="flex items-center gap-3 mb-4 text-3xl sm:text-4xl">
+        <span>🛡️</span>
+        <h1 class="font-bold tracking-tight">Canvassr</h1>
+      </div>
+      <h2 class="text-lg sm:text-xl font-medium text-indigo-100 mb-2">Privacy Policy</h2>
+      <p class="text-xs text-indigo-300">Last Updated: May 22, 2026</p>
+    </header>
+
+    <main class="space-y-10 bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-slate-100">
+      
+      <!-- Introduction -->
+      <section class="space-y-3">
+        <p class="text-sm text-slate-600">
+          Canvassr ("the Application") is a political and mission-driven campaign management application built to operate within the Google Apps Script environment, utilizing Google Sheets as its primary data storage layer.
+        </p>
+        <p class="text-sm text-slate-600">
+          We are committed to protecting the privacy and security of all campaign coordinators, volunteers, and canvassers. This Privacy Policy describes how we collect, use, store, and share information processed by the Application.
+        </p>
+      </section>
+
+      <hr class="border-slate-100">
+
+      <!-- Section 1: Scope -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+          <span class="text-indigo-600">1.</span> Scope of the Application
+        </h3>
+        <p class="text-sm text-slate-600">
+          Canvassr is designed for internal campaign organization. It is deployed as a Google Workspace Web App. By utilizing the Application, you consent to the collection and processing of data in accordance with this Privacy Policy.
+        </p>
+      </section>
+
+      <!-- Section 2: Data Processed -->
+      <section class="space-y-4">
+        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+          <span class="text-indigo-600">2.</span> Information We Collect and Process
+        </h3>
+        <p class="text-sm text-slate-600">
+          To organize weekly canvassing shifts and optimal routes, the Application processes the following categories of information:
+        </p>
+
+        <div class="grid grid-cols-1 gap-4 mt-2">
+          <!-- Canvassers Card -->
+          <div class="p-5 bg-slate-50 border border-slate-100 rounded-2xl space-y-2">
+            <h4 class="font-bold text-xs text-indigo-900 uppercase tracking-wider">👤 Canvasser & Volunteer Details</h4>
+            <ul class="list-disc list-inside text-xs text-slate-600 space-y-1.5">
+              <li><strong>Roster Details:</strong> First name, last name, email address, and telephone number.</li>
+              <li><strong>Scheduling Data:</strong> Logged unavailable dates, vacation ranges, and shift assignments.</li>
+              <li><strong>Roster Notes:</strong> Optional notes recorded by coordinators regarding canvasser preferences or Spanish fluency.</li>
+            </ul>
+          </div>
+
+          <!-- Campaign Card -->
+          <div class="p-5 bg-slate-50 border border-slate-100 rounded-2xl space-y-2">
+            <h4 class="font-bold text-xs text-indigo-900 uppercase tracking-wider">🗺️ Geographic & Campaign Data</h4>
+            <ul class="list-disc list-inside text-xs text-slate-600 space-y-1.5">
+              <li><strong>Canvassing Lists (Turfs):</strong> Turf titles, door counts, and decimal coordinate centroids (latitude and longitude).</li>
+              <li><strong>Meeting Places:</strong> Location names, dynamic decimal coordinates, and generated navigation links.</li>
+              <li><strong>Shifts & Rosters:</strong> Shift dates, times, durations, assigned lead canvassers, and attending canvasser rosters.</li>
+            </ul>
+          </div>
+
+          <!-- Google Session Card -->
+          <div class="p-5 bg-slate-50 border border-slate-100 rounded-2xl space-y-2">
+            <h4 class="font-bold text-xs text-indigo-900 uppercase tracking-wider">🔐 Google Session Data</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              When accessing the Application, the Google Apps Script environment reads your active Google account email address (<code class="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-[10px] text-indigo-600">Session.getActiveUser().getEmail()</code>). This is used solely to verify coordinate access scopes, display your name in the sidebar footer, and pre-fill coordinator email signatures.
+            </p>
+          </div>
+
+          <!-- AI Data Protection Card -->
+          <div class="p-5 bg-slate-50 border border-slate-100 rounded-2xl space-y-2">
+            <h4 class="font-bold text-xs text-indigo-900 uppercase tracking-wider">🤖 AI Data Protection & PII Exclusions</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              When utilizing Generative AI (such as Google Gemini) to draft shift announcements, the Application strictly enforces a <strong>zero-PII transmission policy</strong>:
+            </p>
+            <ul class="list-disc list-inside text-xs text-slate-600 space-y-1.5 pl-1">
+              <li><strong>Strict Exclusions:</strong> Canvasser email addresses, telephone numbers, availability ranges, and roster notes are <strong>never</strong> sent to AI services.</li>
+              <li><strong>Minimal Context:</strong> Prompt payloads contain only shift times, location names, and scheduled canvasser names purely to compile shift attendance tables.</li>
+              <li><strong>No AI Training:</strong> Data processed via secure API keys is processed in private sandboxes and is never used by AI providers to train public models.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: How We Use Info -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+          <span class="text-indigo-600">3.</span> How We Use Your Information
+        </h3>
+        <p class="text-sm text-slate-600">
+          We process information exclusively to facilitate campaign canvassing operations, specifically to:
+        </p>
+        <ul class="list-disc list-inside text-xs text-slate-600 space-y-2 pl-2">
+          <li><strong>Coordinate Weekly Shifts:</strong> Group canvassers and list assignments into structured shifts.</li>
+          <li><strong>Optimize Proximity Sorters:</strong> Calculate Haversine distances between turf lists and meeting locations to assign the most optimal meeting place for each shift.</li>
+          <li><strong>Generate Calendar Invites:</strong> Construct Google Calendar templates containing shift details and coordinate location links.</li>
+          <li><strong>Draft Announcements & Reminders:</strong> Compile weekly schedule summaries and isolate inactive volunteers (Nags) to draft reminder emails.</li>
+          <li><strong>Compose AI Drafts:</strong> Process coordinator prompt templates through configured Generative AI engines (such as Google Gemini) using your campaign's private API keys.</li>
+        </ul>
+      </section>
+
+      <!-- Section 4: Storage & Security -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+          <span class="text-indigo-600">4.</span> Data Storage and Security
+        </h3>
+        <p class="text-sm text-slate-600">
+          We prioritize data sovereignty and security. The Application does not use external databases or third-party servers for data storage:
+        </p>
+        <ul class="list-disc list-inside text-xs text-slate-600 space-y-2 pl-2">
+          <li><strong>Google Workspace Ecosystem:</strong> All canvasser, turf, and shift data is stored **exclusively** inside your campaign's private Google Spreadsheet.</li>
+          <li><strong>Access Permissions:</strong> Access to the spreadsheet and web app portal is controlled strictly through Google Drive's native sharing permissions.</li>
+          <li><strong>API Keys Security:</strong> Your generative AI API keys (Gemini, OpenAI, Anthropic) are stored securely inside your private Google Apps Script **Script Properties**. They are never exposed in client-side code, committed to public version control, or shared. In the UI settings console, these keys are masked (e.g., <code class="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-[10px]">GEMI...43a2</code>) to prevent shoulder-surfing.</li>
+        </ul>
+      </section>
+
+      <!-- Section 5: Third Parties -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+          <span class="text-indigo-600">5.</span> Third-Party Services
+        </h3>
+        <p class="text-sm text-slate-600">
+          The Application integrates with the following third-party services to enable essential geographic and visual features:
+        </p>
+        <ul class="list-disc list-inside text-xs text-slate-600 space-y-2 pl-2">
+          <li><strong>Google Maps & OpenStreetMap (Leaflet):</strong> Displays interactive maps of canvassing lists and meeting places.</li>
+          <li><strong>Google Geocoding API:</strong> Translates addresses entered in forms into raw decimal coordinates.</li>
+          <li><strong>Generative AI Providers (Gemini, OpenAI, Anthropic):</strong> securely relays coordinator prompt templates via HTTPS requests using your campaign's private API keys.</li>
+          <li><strong>Google Mail Service:</strong> Uses Google's native MailApp/GmailApp to send announcements directly from the coordinator's Google account.</li>
+        </ul>
+      </section>
+
+      <!-- Section 6: Data Retention -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+          <span class="text-indigo-600">6.</span> Data Retention and Rights
+        </h3>
+        <p class="text-sm text-slate-600">
+          Because all data is stored inside your campaign's spreadsheet, coordinators retain complete control over data retention and volunteer rights. Volunteers can contact their campaign coordinator to request contact updates, unavailability log changes, or complete canvasser roster removal. Campaign administrators can revoke script web app deployments at any time to cease all data processing.
+        </p>
+      </section>
+
+      <!-- Section 7: Contact -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+          <span class="text-indigo-600">7.</span> Contact Information
+        </h3>
+        <p class="text-sm text-slate-600">
+          If you have any questions about this Privacy Policy or your campaign's data processing practices, please contact your campaign coordinator or script administrator directly.
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="mt-10 text-center text-xs text-slate-400 select-none">
+      <p>&copy; 2026 Canvassr Campaign Portal. Operating inside Google Workspace.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
