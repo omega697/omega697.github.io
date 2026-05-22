@@ -1,47 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Connections Helper</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 2rem; background: #f9f9f9; }
-        .container { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        h1 { color: #1a1a1a; margin-top: 0; }
-        h2 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 2rem; }
-        p { margin-bottom: 1rem; }
-        footer { margin-top: 3rem; font-size: 0.8rem; color: #7f8c8d; text-align: center; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - ConnectionsHelper</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p>Last Updated: March 2, 2026</p>
-        
-        <p>Connections Helper ("we," "our," or "the App") is committed to protecting your privacy. This policy explains how we handle information in our mobile application.</p>
+<body class="bg-slate-50 text-slate-700 antialiased leading-relaxed">
 
-        <h2>1. Data Collection</h2>
-        <p><strong>Connections Helper does not collect, store, or transmit any personal information.</strong></p>
-        <p>The App uses on-device Machine Learning (ML Kit) to scan screenshots of the "Connections" game. All image processing occurs entirely on your device. We do not upload your screenshots, extracted text, or game state to any external servers.</p>
+  <div class="max-w-3xl mx-auto px-6 py-12 sm:py-16">
+    <!-- Header Card -->
+    <header class="bg-emerald-950 text-white rounded-3xl p-8 sm:p-10 shadow-lg mb-10 select-none">
+      <div class="flex items-center gap-3 mb-4 text-3xl sm:text-4xl">
+        <span>🛡️</span>
+        <h1 class="font-bold tracking-tight">ConnectionsHelper</h1>
+      </div>
+      <h2 class="text-lg sm:text-xl font-medium text-emerald-100 mb-2">Privacy Policy</h2>
+      <p class="text-xs text-emerald-300">Last Updated: May 22, 2026</p>
+    </header>
 
-        <h2>2. Device Permissions</h2>
-        <p>The App requests the following permissions to function:</p>
-        <ul>
-            <li><strong>Screen Capture:</strong> Used to take a one-shot screenshot of the "Connections" game to extract the words. This occurs only when you tap the "Scan Screen" button.</li>
-            <li><strong>Overlay (Display over other apps):</strong> Used to provide a convenient "Scan" button while you are in the game.</li>
+    <main class="space-y-10 bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-slate-100">
+      
+      <!-- Introduction -->
+      <section class="space-y-3">
+        <p class="text-sm text-slate-600">
+          ConnectionsHelper ("the Application") is a native Android utility tool built to assist players of the NYT Connections puzzle game.
+        </p>
+        <p class="text-sm text-slate-600">
+          We are deeply committed to protecting your privacy. This Privacy Policy details how the Application handles information, emphasizing our core philosophy: <strong>what happens on your device, stays on your device</strong>.
+        </p>
+      </section>
+
+      <hr class="border-slate-100">
+
+      <!-- Section 1: No Personal Data Collection -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+          <span class="text-emerald-600">1.</span> No Personal Data Collection
+        </h3>
+        <p class="text-sm text-slate-600">
+          ConnectionsHelper does not require any user accounts, email registrations, login credentials, or profile setups. We do not collect, harvest, store, transmit, or share any personally identifiable information (PII) whatsoever.
+        </p>
+      </section>
+
+      <!-- Section 2: Data Processing & Storage -->
+      <section class="space-y-4">
+        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+          <span class="text-emerald-600">2.</span> Information Processing & Storage
+        </h3>
+        <p class="text-sm text-slate-600">
+          To provide its offline helper functionality and screenshot-import features, the Application processes and stores data locally on your device:
+        </p>
+
+        <div class="grid grid-cols-1 gap-4 mt-2">
+          <!-- Image Scanner Card -->
+          <div class="p-5 bg-slate-50 border border-slate-100 rounded-2xl space-y-2">
+            <h4 class="font-bold text-xs text-emerald-900 uppercase tracking-wider">📸 Local On-Device Image Processing</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              When importing a puzzle from a screenshot, all computer vision operations occur <strong>100% client-side</strong>:
+            </p>
+            <ul class="list-disc list-inside text-xs text-slate-600 space-y-1.5 pl-1">
+              <li><strong>On-Device OCR:</strong> We use Google's ML Kit Text Recognition SDK, which runs locally on the device.</li>
+              <li><strong>Tile Crops:</strong> For tiles containing graphics/emojis that cannot be recognized by text engine, the app crops and segments the image directly from the screenshot.</li>
+              <li><strong>Zero Cloud Uploads:</strong> Your screenshot, cropped tile bitmaps, and extracted text words are <strong>never</strong> uploaded to external servers, cloud networks, or shared with third parties.</li>
+            </ul>
+          </div>
+
+          <!-- Local Storage Card -->
+          <div class="p-5 bg-slate-50 border border-slate-100 rounded-2xl space-y-2">
+            <h4 class="font-bold text-xs text-emerald-900 uppercase tracking-wider">💾 Local Database & Caching</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Your settings, completed puzzle indexes, custom game states, recent scanning coordinates, and imported card sequences are stored securely inside your device's private sandbox database (Room SQL) and Preferences (DataStore). This data is cleared only if you manually clear the app's storage in Android Settings or uninstall the app.
+            </p>
+          </div>
+
+          <!-- Network Sync Card -->
+          <div class="p-5 bg-slate-50 border border-slate-100 rounded-2xl space-y-2">
+            <h4 class="font-bold text-xs text-emerald-900 uppercase tracking-wider">🌐 Network Communications</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              The Application requires active network access purely to query daily public NYT Connections puzzle layouts (retrieved directly from public <code class="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-[10px] text-emerald-600">nytimes.com</code> JSON endpoints). These requests are strictly informational; no device UUIDs, personal tags, IP mapping accounts, or telemetry data are passed.
+            </p>
+          </div>
+
+          <!-- Notifications Card -->
+          <div class="p-5 bg-slate-50 border border-slate-100 rounded-2xl space-y-2">
+            <h4 class="font-bold text-xs text-emerald-900 uppercase tracking-wider">🔔 Alarm & Reminder System</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              If you choose to enable daily reminders or notifications for future puzzle availability:
+            </p>
+            <ul class="list-disc list-inside text-xs text-slate-600 space-y-1.5 pl-1">
+              <li>All triggers are generated locally by scheduling OS system alarms (<code class="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-[10px] text-emerald-600">AlarmManager</code>).</li>
+              <li>No external cloud-based push notification messaging services are utilized.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Required System Permissions -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+          <span class="text-emerald-600">3.</span> Requested Android Permissions
+        </h3>
+        <p class="text-sm text-slate-600">
+          The Application requests standard Android permissions solely to deliver its essential functions:
+        </p>
+        <ul class="list-disc list-inside text-xs text-slate-600 space-y-2 pl-2">
+          <li><strong>INTERNET:</strong> Required to connect to public servers and fetch today's daily puzzle data.</li>
+          <li><strong>POST_NOTIFICATIONS:</strong> Required on Android 13+ to post local reminder alarms for daily streak tasks.</li>
+          <li><strong>RECEIVE_BOOT_COMPLETED:</strong> Required to automatically register and reschedule your custom local alarm alarms after your phone is restarted.</li>
         </ul>
+      </section>
 
-        <h2>3. Third-Party Services</h2>
-        <p>The App does not contain advertisements and utilizes no third-party tracking or analytics services.</p>
+      <!-- Section 4: Third-Party Integrations -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+          <span class="text-emerald-600">4.</span> Third-Party Services
+        </h3>
+        <p class="text-sm text-slate-600">
+          We integrate Google's ML Kit client library locally to enable text recognition. No data processed through Google ML Kit on-device is shared back to Google or sent over network channels for training.
+        </p>
+      </section>
 
-        <h2>4. Changes to This Policy</h2>
-        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by updating the "Last Updated" date at the top of this page.</p>
+      <!-- Section 5: Data Sovereignty & Deletion -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+          <span class="text-emerald-600">5.</span> Data Retention & User Deletion
+        </h3>
+        <p class="text-sm text-slate-600">
+          Since your data resides 100% within your device, you hold total sovereignty over your records. You can clear all recent scans, reset active board progresses, or delete complete history directly in the app's Settings panel. Uninstalling the app permanently purges all related local data.
+        </p>
+      </section>
 
-        <h2>5. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:info@guywithburrito.com">info@guywithburrito.com</a></p>
-    </div>
-    <footer>
-        &copy; 2026 Connections Helper. Not affiliated with The New York Times.
+      <!-- Section 6: Changes to this Policy -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+          <span class="text-emerald-600">6.</span> Updates
+        </h3>
+        <p class="text-sm text-slate-600">
+          We may refine this policy as app integrations evolve. Any updates will be posted directly on this page. Your continued use of the app is subject to the latest version of this local policy.
+        </p>
+      </section>
+
+      <!-- Section 7: Contact -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+          <span class="text-emerald-600">7.</span> Contact
+        </h3>
+        <p class="text-sm text-slate-600">
+          If you have any inquiries regarding this Privacy Policy or your offline data sovereignty, please open an issue or contact us.
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="mt-10 text-center text-xs text-slate-400 select-none">
+      <p>&copy; 2026 ConnectionsHelper App. Running entirely on-device.</p>
     </footer>
+  </div>
+
 </body>
 </html>
