@@ -26,7 +26,7 @@
           <h1 class="font-bold tracking-tight">Canvassr</h1>
         </div>
         <h2 class="text-lg sm:text-xl font-medium text-indigo-100 mb-2">Privacy Policy</h2>
-        <p class="text-xs text-indigo-300">Last Updated: May 22, 2026</p>
+        <p class="text-xs text-indigo-300">Last Updated: May 25, 2026</p>
       </header>
 
       <main class="space-y-10 bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-slate-100">
@@ -110,10 +110,39 @@
               <h4 class="font-bold text-xs text-indigo-900 uppercase tracking-wider">🔐 Google Session Data</h4>
               <p class="text-xs text-slate-600 leading-relaxed">
                 When accessing the Application, the Google Apps Script environment reads your active Google account
-                email address (<code class="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-[10px] text-indigo-600"
-                  >Session.getActiveUser().getEmail()</code
-                >). This is used solely to verify coordinate access scopes, display your name in the sidebar footer, and
-                pre-fill coordinator email signatures.
+                email address. This is used solely to verify campaign coordinator access rights, display your name in
+                the sidebar footer, and pre-fill coordinator email signatures.
+              </p>
+            </div>
+
+            <!-- Gmail Compose & Drafts Data Card (Tweak 12 - Scheduled Send updates!) -->
+            <div class="p-5 bg-slate-50 border border-slate-100 rounded-2xl space-y-2">
+              <h4 class="font-bold text-xs text-indigo-900 uppercase tracking-wider">📧 Gmail Compose & Drafts Data</h4>
+              <p class="text-xs text-slate-600 leading-relaxed text-justify">
+                <strong>100% Optional Progressive Authorization:</strong> Connecting your Gmail account is completely
+                optional. You can utilize Canvassr's core dashboard, calendar rosters, and turf mapping features with
+                absolute minimal permissions. Scopes for email features are authorized on-demand
+                <em>only if and when</em> you decide to enable them:
+              </p>
+              <ul class="list-disc pl-5 text-[11px] text-slate-500 space-y-1.5">
+                <li>
+                  <strong>Gmail Compose Permission (Immediate Sending):</strong> Allows the app to compile, draft, and
+                  send weekly shift announcement emails to your campaign's listserv.
+                </li>
+                <li>
+                  <strong>Gmail Read-Only and Automation Permission (Scheduled Sending):</strong> Allows the app to read
+                  the subject lines of scheduled drafts in your drafts folder, set up background clock triggers to
+                  release them automatically, and clean them up once sent.
+                </li>
+              </ul>
+              <p class="text-xs text-slate-600 leading-relaxed text-justify">
+                <strong>Strict Programmatic Isolation:</strong> The Application programmatically isolates all Gmail
+                interactions strictly to the specific unsent drafts it created itself. The codebase possesses
+                <strong>absolutely zero authority or functionality</strong> to search your inbox, read your personal
+                emails, access external threads, modify messages, or permanently delete any personal email.
+                <strong>Instant Revocability:</strong> You can disconnect or revoke these credentials at any time inside
+                the Settings panel in a single click, which instantly purges all OAuth tokens and background triggers
+                from your GSuite properties.
               </p>
             </div>
 
@@ -231,8 +260,9 @@
               templates via HTTPS requests using your campaign's private API keys.
             </li>
             <li>
-              <strong>Google Mail Service:</strong> Uses Google's native MailApp/GmailApp to send announcements directly
-              from the coordinator's Google account.
+              <strong>Google Mail & Gmail Service:</strong> Uses Google's native MailApp/GmailApp to send announcements
+              immediately, and leverages GmailApp Drafts to queue and manage scheduled releases under your campaign's
+              private User Properties.
             </li>
           </ul>
         </section>
