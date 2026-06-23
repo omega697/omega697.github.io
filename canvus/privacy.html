@@ -181,6 +181,33 @@
               </p>
             </div>
 
+            <!-- Geolocation Data Card -->
+            <div class="p-5 bg-slate-50 border border-slate-100 rounded-2xl space-y-2">
+              <h4 class="font-bold text-xs text-indigo-900 uppercase tracking-wider">
+                📍 User Geolocation Data (On-Demand)
+              </h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                When viewing maps (such as turfs or meeting places), the Application optionally requests browser-level
+                <strong>Geolocation permissions</strong>. If granted:
+              </p>
+              <ul class="list-disc pl-5 text-[11px] text-slate-500 space-y-1.5">
+                <li>
+                  <strong>Real-Time Map Markers:</strong> Your current location is displayed as a blue dot helper marker
+                  directly on the Leaflet map to help you navigate relative to turfs or meeting spots.
+                </li>
+                <li>
+                  <strong>Search Biasing (Viewport Bias):</strong> Your coordinates are used as a viewport hint when
+                  performing geocoding searches (address resolution) to prioritize local results and save typing time.
+                </li>
+                <li>
+                  <strong>Background Tracking:</strong> The Application possesses
+                  <strong>absolutely zero capability</strong>
+                  to track your location in the background. Geolocation is processed entirely client-side and is never
+                  written to the database or tracked historically.
+                </li>
+              </ul>
+            </div>
+
             <!-- Gmail & Calendar Connected Services Data Card -->
             <div class="p-5 bg-slate-50 border border-slate-100 rounded-2xl space-y-2">
               <h4 class="font-bold text-xs text-indigo-900 uppercase tracking-wider">
