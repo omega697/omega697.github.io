@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy - Canvus</title>
+    <title>Privacy Policy - Canv.us</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -91,7 +91,7 @@
             </svg>
           </div>
           <h2 class="text-lg sm:text-xl font-medium text-indigo-100 mb-2">Privacy Policy</h2>
-          <p class="text-xs text-indigo-300">Last Updated: June 21, 2026</p>
+          <p class="text-xs text-indigo-300">Last Updated: July 7, 2026</p>
         </div>
       </header>
 
@@ -99,7 +99,7 @@
         <!-- Introduction -->
         <section class="space-y-3">
           <p class="text-sm text-slate-600">
-            Canvus ("the Application") is a standalone, campaign-focused canvassing management web application. It
+            Canv.us ("the Application") is a standalone, campaign-focused canvassing management web application. It
             operates using Svelte on the client side, an Express.js API server deployed on Google Cloud Run, and Google
             Cloud Firestore as its primary secure database.
           </p>
@@ -107,6 +107,10 @@
             We are committed to protecting the privacy and security of all campaign coordinators, administrators, and
             volunteer canvassers. This Privacy Policy describes how we collect, use, store, and secure information
             processed by the Application.
+          </p>
+          <p class="text-sm text-slate-600 font-medium italic">
+            Canv.us's use and transfer to any other app of information received from Google APIs will adhere to Google
+            API Services User Data Policy, including the Limited Use requirements.
           </p>
         </section>
 
@@ -118,7 +122,7 @@
             <span class="text-indigo-600">1.</span> Scope of the Application
           </h3>
           <p class="text-sm text-slate-600">
-            Canvus is designed for internal campaign coordination. It is deployed as a standalone web application
+            Canv.us is designed for internal campaign coordination. It is deployed as a standalone web application
             utilizing Firebase Authentication to secure logins. By using the Application, campaign coordinators consent
             to the collection, processing, and cryptographic storage of data in accordance with this Privacy Policy.
           </p>
@@ -143,7 +147,9 @@
               <ul class="list-disc list-inside text-xs text-slate-600 space-y-1.5">
                 <li><strong>Roster Details:</strong> First name, last name, email address, and telephone number.</li>
                 <li>
-                  <strong>Scheduling Data:</strong> Logged unavailable dates, vacation ranges, and shift assignments.
+                  <strong>Scheduling & Outreach Data:</strong> Logged unavailable dates, shift assignments, and
+                  automated <strong>lastContactedAt timestamps</strong> updated when outreach emails are successfully
+                  sent.
                 </li>
                 <li>
                   <strong>Roster Notes:</strong> Optional notes recorded by coordinators regarding canvasser preferences
@@ -170,14 +176,22 @@
               </ul>
             </div>
 
-            <!-- Google Session Card -->
+            <!-- Google Session & Presence Card -->
             <div class="p-5 bg-slate-50 border border-slate-100 rounded-2xl space-y-2">
-              <h4 class="font-bold text-xs text-indigo-900 uppercase tracking-wider">🔐 User Session & Auth Data</h4>
+              <h4 class="font-bold text-xs text-indigo-900 uppercase tracking-wider">
+                🔐 User Session, Auth & Presence Data
+              </h4>
               <p class="text-xs text-slate-600 leading-relaxed">
                 When signing in via Google, Firebase Authentication reads your <strong>email address</strong>,
                 <strong>profile display name</strong>, and <strong>profile picture URL</strong>. This data is used
                 solely to verify campaign authorization, assign appropriate role access (Coordinators vs.
                 Administrators), and display your user profile in the application header.
+              </p>
+              <p class="text-[11px] text-slate-500 leading-relaxed">
+                <strong>Activity Presence Tracking:</strong> While actively using the Application, we track a
+                <strong>lastSeen timestamp</strong> to display active coordinator presence on the campaign staff
+                settings panel. This heartbeat is throttled client-side to write once every 5 minutes and is updated as
+                long as the browser tab remains active.
               </p>
             </div>
 
